@@ -1,0 +1,9 @@
+<ul>
+{{#each controller}}
+  {{#unless isNew}}
+    <li>{{name}} <a href="#" {{action remove this}}>x</a></li>
+  {{/unless}}
+{{/each}}
+</ul>
+{{#linkTo "resources.new"}}Add{{/linkTo}}
+<br />

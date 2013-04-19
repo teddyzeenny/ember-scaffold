@@ -1,0 +1,8 @@
+<form {{action submit this on="submit"}}>
+  <label>Name: </labe>
+  {{view Ember.TextField valueBinding="name" placeholder="ex: Posts"}}
+  <button type="submit">Create</button>
+  {{#if recordExists}}
+    This resources already exists
+  {{/if}}
+</form>

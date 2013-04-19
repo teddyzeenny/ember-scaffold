@@ -1,0 +1,1 @@
+App.CodeController = Em.ArrayController.extend();
