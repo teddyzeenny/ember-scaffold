@@ -3,7 +3,7 @@
   {{#unless isNew}}
     <li class="items-list__item">
       {{name}} 
-      <button class="btn btn-danger" {{action remove this}}>Delete</button>
+      <i class="icon-remove items-list__btn" {{action remove this}}></i>
     </li>
   {{/unless}}
 {{/each}}
