@@ -1,4 +1,5 @@
 App.CodeController = Em.ArrayController.extend({
+  emberModels: [],
 
   currentView: 'model',
 

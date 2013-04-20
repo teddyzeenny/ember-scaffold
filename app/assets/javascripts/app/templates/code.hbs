@@ -24,22 +24,38 @@
   </ul>
   <div class="tab-content">
 
-{{#if isModelView}}
-<pre>
-  {{partial "code/ember_models"}}
-</pre>
-{{/if}}
+    {{#if isModelView}}
+    <pre>
+      // MODELS
+      {{partial "code/ember_models"}}
+    </pre>
+    {{/if}}
 
-{{#if isRouterView}}
-<pre>
-  {{partial "code/router"}}
-</pre>
-{{/if}}
+    {{#if isRouterView}}
+    <pre>
+      {{partial "code/router"}}
+    </pre>
+    {{/if}}
 
-{{#if isRouteView}}
-<pre>
-  {{partial "code/routes"}}
-</pre>
-{{/if}}
+    {{#if isRouteView}}
+    <pre>
+      {{partial "code/routes"}}
+    </pre>
+    {{/if}}
+  </div>
+
 </div>
+
+<div id="entire-js"  style="display: none;">
+  var App = Em.Application.create();
+
+  {{partial "code/ember_models"}}
+
+
+</div>
+
+<div id="entire-index" style="display: none;">
+  &lt;script type="text/x-handlebars">
+  Hello world
+  &lt;/script>
 </div>
