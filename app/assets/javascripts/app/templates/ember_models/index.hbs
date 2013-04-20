@@ -1,5 +1,16 @@
 <ul>
-{{#each controller}}
-  <li>{{name}} <button {{action removeRecord this}}>x</button></li>
+{{#each controller itemController="emberModelsItem"}}
+  <li>
+    {{#unless isEditing}}
+      <span {{action edit on="doubleClick"}}>{{fullName}} </span>
+      <button {{action removeRecord this}}>x</button>
+    {{else}}
+      <form {{action save model on="submit"}}>
+      {{view Ember.TextField valueBinding="name"}}
+      <button type="submit">Save</button>
+      <button {{action "cancel"}}>Cancel</button>
+    {{/unless}}
+  </li>
 {{/each}}
 </ul>
+{{#linkTo "ember_models.new"}}New Model{{/linkTo}}

@@ -1,0 +1,7 @@
+<form {{action "createRecord" model on="submit"}}>
+  <label>Name</label>
+  {{view Ember.TextField valueBinding="name" placeholder="ex: Post"}} <span class="error">{{error}}</span>
+  <br />
+  <button type="submit">Create Model</button>
+</form>
+{{#linkTo "ember_models.index"}}Cancel{{/linkTo}}

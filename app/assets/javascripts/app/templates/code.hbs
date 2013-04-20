@@ -1,6 +1,25 @@
-<pre>
-  {{!render router}}
-  {{partial "router"}}
+<a href="#" {{action setView "model"}}>Models</a>
+<a href="#" {{action setView "router"}}>Router</a>
+<a href="#" {{action setView "route"}}>Routes</a>
+<a href="#" {{action setView "controller"}}>Controllers</a>
+<a href="#" {{action setView "view"}}>Views</a>
+<a href="#" {{action setView "template"}}>Templates</a>
+<a href="#" {{action setView "test"}}>Tests</a>
 
+{{#if isModelView}}
+<pre>
+  Models
+</pre>
+{{/if}}
+
+{{#if isRouterView}}
+<pre>
+  {{partial "router"}}
+</pre>
+{{/if}}
+
+{{#if isRouteView}}
+<pre>
   {{partial "routes"}}
 </pre>
+{{/if}}
