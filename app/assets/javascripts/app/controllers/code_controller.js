@@ -2,11 +2,9 @@ App.CodeController = Em.ArrayController.extend({
 
   currentView: 'model',
 
-
   setView: function(view) {
     this.set('currentView', view);
   },
-
 
   isModelView: function() {
     return this.get('currentView') === 'model';
@@ -31,7 +29,5 @@ App.CodeController = Em.ArrayController.extend({
   isTemplateView: function() {
     return this.get('currentView') === 'template';
   }.property('currentView')
-
-
 
 });

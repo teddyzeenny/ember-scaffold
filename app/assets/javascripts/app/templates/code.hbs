@@ -1,10 +1,33 @@
-<a href="#" {{action setView "model"}}>Models</a>
-<a href="#" {{action setView "router"}}>Router</a>
-<a href="#" {{action setView "route"}}>Routes</a>
-<a href="#" {{action setView "controller"}}>Controllers</a>
-<a href="#" {{action setView "view"}}>Views</a>
-<a href="#" {{action setView "template"}}>Templates</a>
-<a href="#" {{action setView "test"}}>Tests</a>
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li {{bindAttr class="isModelView:active"}}>
+      <a href="#" {{action setView "model"}}>Models</a>
+    </li>
+    <li {{bindAttr class="isRouterView:active"}}>
+      <a href="#" {{action setView "router"}}>Router</a>
+    </li>
+    <li {{bindAttr class="isRouteView:active"}}>
+      <a href="#" {{action setView "route"}}>Routes</a>
+    </li>
+    <li {{bindAttr class="isControllerView:active"}}>
+      <a href="#" {{action setView "controller"}}>Controllers</a>
+    </li>
+    <li {{bindAttr class="isViewView:active"}}>
+      <a href="#" {{action setView "view"}}>Views</a>
+    </li>
+    <li {{bindAttr class="isTemplateView:active"}}>
+      <a href="#" {{action setView "template"}}>Templates</a>
+    </li>
+    <li {{bindAttr class="isTestView:active"}}>
+      <a href="#" {{action setView "test"}}>Tests</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    {{#if isModelView}}
+      <pre>
+        Models
+      </pre>
+    {{/if}}
 
 {{#if isModelView}}
 <pre>
@@ -23,3 +46,5 @@
   {{partial "routes"}}
 </pre>
 {{/if}}
+</div>
+</div>

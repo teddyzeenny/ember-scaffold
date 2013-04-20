@@ -1,0 +1,22 @@
+.items-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.items-list__item {
+  padding: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-bottom: solid thin #ddd;
+}
+
+.items-list__item:last-of-type {
+  border-bottom: none;
+}
+
+.items-list input {
+  margin-bottom: 0;
+}

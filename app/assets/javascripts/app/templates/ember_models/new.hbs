@@ -16,6 +16,8 @@
   <button {{action addAttribute}}>Add an attribute</button>
 
   <br /><Br />
-  <button type="submit">Create Model</button>
+  <div class="control-group">
+    <button class="btn btn-primary" type="submit">Create Model</button>
+  </div>
 </form>
-{{#linkTo "ember_models.index"}}Cancel{{/linkTo}}
+{{#linkTo "ember_models.index" class="btn btn-danger"}}Cancel{{/linkTo}}

@@ -1,3 +1,3 @@
 App.ApplicationView = Em.View.extend({
-  classNames: ['application']
+  classNames: ["application", "container"]
 });
