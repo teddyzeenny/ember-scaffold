@@ -4,7 +4,6 @@ App.CodeController = Em.ArrayController.extend({
 
 
   setView: function(view) {
-    console.log(view);
     this.set('currentView', view);
   },
 

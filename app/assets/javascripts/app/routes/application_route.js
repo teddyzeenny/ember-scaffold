@@ -1,6 +1,7 @@
 App.ApplicationRoute = Em.Route.extend({
   setupController: function() {
     this.controllerFor('code').set('model', App.Resource.find());
+    this.controllerFor('code').set('emberModels', App.EmberModel.find());
   },
   renderTemplate: function() {
     this._super();

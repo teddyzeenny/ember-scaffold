@@ -1,0 +1,7 @@
+{{#each emberModels}}
+  {{fullName}} = DS.Model.extend({
+    {{#each modelAttributes itemController="modelAttributeCode"}}
+      {{name}}: DS.attr('{{attributeTypeObject.type}}'){{#unless isLast}},{{/unless}}
+    {{/each}}
+  });
+{{/each}}

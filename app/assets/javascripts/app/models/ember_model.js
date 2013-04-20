@@ -1,6 +1,8 @@
 App.EmberModel = DS.Model.extend({
-  name: DS.attr("string"),
-  plural: DS.attr("string"),
+  name: DS.attr('string'),
+  plural: DS.attr('string'),
+
+  modelAttributes: DS.hasMany('App.ModelAttribute'),
 
   fullName: function() {
     return 'App.' + this.get('name');

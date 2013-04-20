@@ -1,7 +1,21 @@
-<form {{action "createRecord" model on="submit"}}>
+<form {{action "createModel" model on="submit"}}>
   <label>Name</label>
   {{view Ember.TextField valueBinding="name" placeholder="ex: Post"}} <span class="error">{{error}}</span>
   <br />
+  {{#each modelAttributes}}
+    <label>Name: </label>{{view Ember.TextField valueBinding="name" placeholder="ex: name"}}
+    <label>Type: </label>
+    {{view Ember.Select
+    contentBinding="controller.attributeTypes"
+    selectionBinding="attributeTypeObject"
+    optionValuePath="content.id"
+    optionLabelPath="content.name"}}
+    <button {{action removeAttribute this}}>x</button>
+    <br />
+  {{/each}}
+  <button {{action addAttribute}}>Add an attribute</button>
+
+  <br /><Br />
   <button type="submit">Create Model</button>
 </form>
 {{#linkTo "ember_models.index"}}Cancel{{/linkTo}}

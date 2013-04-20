@@ -23,6 +23,12 @@
   var attributeTypes = [], attributeTypesByIds = {};
 
   App.AttributeType = Em.Object.extend({
+    id: null,
+    name: null,
+    type: null
+  });
+
+  App.AttributeType.reopenClass({
     find: function(id) {
       if(id) {
         return attributeTypesByIds[id];
