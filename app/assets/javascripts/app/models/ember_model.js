@@ -7,7 +7,7 @@ App.EmberModel = DS.Model.extend({
 
   fullName: function() {
     return this.get('customApp.namespace') + '.' + this.get('name');
-  }.property('name'),
+  }.property('name', 'customApp.namespace'),
 
   beforeSave: function() {
     var name = this.get('name').replace('App.', '').classify();
