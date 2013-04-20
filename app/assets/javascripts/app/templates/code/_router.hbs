@@ -5,6 +5,7 @@
     this.resource('{{name}}', function() {
       this.route('new');
       this.route('{{singular name}}', { path: '{{singular name}}_id' }, function() {
+        // this.route('index'); is generated for you
         this.route('edit');
       });
     });

@@ -1,5 +1,5 @@
 App.EmberModelsRoute = Em.Route.extend({
   model: function() {
-    return App.EmberModel.find();
+    return this.modelFor('custom_app').get('emberModels');
   }
 });

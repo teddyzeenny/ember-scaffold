@@ -3,9 +3,10 @@ App.EmberModel = DS.Model.extend({
   plural: DS.attr('string'),
 
   modelAttributes: DS.hasMany('App.ModelAttribute'),
+  customApp: DS.belongsTo('App.CustomApp'),
 
   fullName: function() {
-    return 'App.' + this.get('name');
+    return this.get('customApp.namespace') + '.' + this.get('name');
   }.property('name'),
 
   beforeSave: function() {

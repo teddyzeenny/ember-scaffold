@@ -6,7 +6,9 @@ App.EmberModelsNewRoute = Em.Route.extend({
   },
   model: function() {
     var transaction = this.store.transaction();
-    return transaction.createRecord(App.EmberModel);
+    return transaction.createRecord(App.EmberModel,
+        { customApp: this.modelFor('custom_app')
+    });
   },
   deactivate: function() {
     this.get('currentModel.transaction').rollback();

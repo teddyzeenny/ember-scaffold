@@ -2,7 +2,7 @@
 {{#each controller itemController="emberModelsItem"}}
   <li class="items-list__item">
     {{#unless isEditing}}
-      <span {{action edit on="doubleClick"}}>{{fullName}} </span>
+      <span {{action edit on="doubleClick"}}>{{name}} </span>
       <button class="btn btn-danger" {{action removeRecord this}}>Delete</button>
     {{else}}
       <form {{action save model on="submit"}}>

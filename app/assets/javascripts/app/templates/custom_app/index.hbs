@@ -1,0 +1,10 @@
+<form {{action "save" model on="submit"}}>
+  <label>Name</label>
+  {{view Ember.TextField valueBinding="name" placeholder="ex: Post"}} <span class="error">{{error}}</span>
+
+  {{#if isDirty}}
+  <div class="control-group">
+    <button class="btn btn-primary" type="submit">Save</button>
+  </div>
+  {{/if}}
+</form>
