@@ -3,7 +3,7 @@
   <li class="items-list__item">
     {{#unless isEditing}}
       <span {{action edit on="doubleClick"}}>{{name}} </span>
-      <button class="btn btn-danger" {{action removeRecord this}}>Delete</button>
+      <i class="icon-remove items-list__btn" {{action removeRecord this}}></i>
     {{else}}
       <form {{action save model on="submit"}}>
         {{view Ember.TextField valueBinding="name"}}
