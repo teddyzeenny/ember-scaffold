@@ -1,9 +1,13 @@
-<ul>
+<ul class="items-list">
 {{#each controller}}
   {{#unless isNew}}
-    <li>{{name}} <a href="#" {{action remove this}}>x</a></li>
+    <li class="items-list__item">
+      {{name}} 
+      <button class="btn btn-danger" {{action remove this}}>Delete</button>
+    </li>
   {{/unless}}
 {{/each}}
 </ul>
-{{#linkTo "resources.new"}}Add{{/linkTo}}
-<br />
+{{#linkTo "resources.new" class="btn btn-primary"}}
+  <i class="icon-plus-sign icon-white"></i> Add
+{{/linkTo}}

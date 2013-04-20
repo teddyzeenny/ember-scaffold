@@ -1,7 +1,13 @@
 <form {{action "createRecord" model on="submit"}}>
+  {{#if error}}
+    <div class="control-group">
+      <span class="alert alert-error">{{error}}</span>
+    </div>
+  {{/if}}
   <label>Name</label>
-  {{view Ember.TextField valueBinding="name" placeholder="ex: Post"}} <span class="error">{{error}}</span>
-  <br />
-  <button type="submit">Create Model</button>
+  {{view Ember.TextField valueBinding="name" type="text" placeholder="ex: Post"}}
+  <div class="control-group">
+    <button class="btn btn-primary" type="submit">Create Model</button>
+  </div>
 </form>
-{{#linkTo "ember_models.index"}}Cancel{{/linkTo}}
+{{#linkTo "ember_models.index" class="btn btn-danger"}}Cancel{{/linkTo}}

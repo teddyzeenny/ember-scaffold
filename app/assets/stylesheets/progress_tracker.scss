@@ -1,0 +1,62 @@
+.progress-tracker-step.span2 {
+  position: relative;
+  margin-left: 0;
+  width: 16.666666667%;
+}
+
+.progress-tracker-step {
+  opacity: 0.6;
+  cursor: pointer;
+  display: block;
+  color: #333;
+}
+
+.progress-tracker-step:hover {
+  text-decoration: none;
+}
+
+.progress-tracker-step.active {
+  opacity: 1;
+  color: #005580;
+}
+
+.progress-tracker-step__bullet {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: solid thin grey;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.progress-tracker-step.active .progress-tracker-step__bullet {
+  -webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.75);
+}
+
+.progress-tracker-step__text {
+  text-align: center;
+  font-size: 12px;
+}
+
+.progress-tracker-step__line {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+  z-index: -1;
+}
+
+.progress-tracker-step:first-child .progress-tracker-step__line,
+.progress-tracker-step:last-child .progress-tracker-step__line {
+  width: 50%;
+}
+
+.progress-tracker-step:first-child .progress-tracker-step__line {
+  left: 50%;
+}

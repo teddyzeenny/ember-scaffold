@@ -1,8 +1,12 @@
 <form {{action submit this on="submit"}}>
-  <label>Name: </labe>
-  {{view Ember.TextField valueBinding="name" placeholder="ex: Posts"}}
-  <button type="submit">Create</button>
   {{#if recordExists}}
-    This resources already exists
+    <div class="control-group">
+      <span class="alert alert-error">This resources already exists</span>
+    </div>
   {{/if}}
+  <label>Name: </label>
+  {{view Ember.TextField valueBinding="name" placeholder="ex: Posts"}}
+  <div class="control-group">
+    <button class="btn btn-primary" type="submit">Create</button>
+  </div>
 </form>
